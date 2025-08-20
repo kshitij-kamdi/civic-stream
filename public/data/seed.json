@@ -1,0 +1,352 @@
+{
+  "users": [
+    {
+      "id": "citizen_001",
+      "email": "john.doe@email.com",
+      "phone": "+91-9876543210",
+      "name": "John Doe",
+      "role": "citizen",
+      "isActive": true,
+      "createdAt": "2024-01-15T10:00:00.000Z"
+    },
+    {
+      "id": "official_001",
+      "email": "sarah.sanitation@gov.in",
+      "phone": "+91-9876543211",
+      "name": "Sarah Kumar",
+      "role": "official",
+      "department": "Sanitation",
+      "isActive": true,
+      "createdAt": "2024-01-10T08:00:00.000Z"
+    },
+    {
+      "id": "official_002",
+      "email": "raj.electricity@gov.in",
+      "phone": "+91-9876543212",
+      "name": "Raj Patel",
+      "role": "official",
+      "department": "Electricity",
+      "isActive": true,
+      "createdAt": "2024-01-10T08:00:00.000Z"
+    },
+    {
+      "id": "admin_001",
+      "email": "admin@gov.in",
+      "phone": "+91-9876543213",
+      "name": "Admin User",
+      "role": "admin",
+      "isActive": true,
+      "createdAt": "2024-01-05T07:00:00.000Z"
+    }
+  ],
+  "grievances": [
+    {
+      "id": "GRV_20240815_ABC123",
+      "title": "Broken street light on Main Road",
+      "description": "The street light near bus stop 15 on Main Road has been non-functional for the past week, causing safety concerns for pedestrians.",
+      "category": "electricity",
+      "address": "Main Road, Near Bus Stop 15",
+      "pincode": "560001",
+      "citizenId": "citizen_001",
+      "citizenName": "John Doe",
+      "citizenPhone": "+91-9876543210",
+      "status": "in_progress",
+      "priority": "medium",
+      "assignedTo": "official_002",
+      "assignedToName": "Raj Patel",
+      "slaHours": 12,
+      "createdAt": "2024-08-19T14:30:00.000Z",
+      "updatedAt": "2024-08-19T16:45:00.000Z",
+      "dueDate": "2024-08-20T02:30:00.000Z",
+      "isEscalated": false,
+      "statusHistory": [
+        {
+          "status": "submitted",
+          "timestamp": "2024-08-19T14:30:00.000Z",
+          "updatedBy": "citizen_001",
+          "updatedByName": "John Doe",
+          "remarks": "Grievance submitted"
+        },
+        {
+          "status": "acknowledged",
+          "timestamp": "2024-08-19T15:15:00.000Z",
+          "updatedBy": "official_002",
+          "updatedByName": "Raj Patel",
+          "remarks": "Issue acknowledged. Inspection scheduled."
+        },
+        {
+          "status": "in_progress",
+          "timestamp": "2024-08-19T16:45:00.000Z",
+          "updatedBy": "official_002",
+          "updatedByName": "Raj Patel",
+          "remarks": "Repair work has begun. Expected completion within 6 hours."
+        }
+      ]
+    },
+    {
+      "id": "GRV_20240818_DEF456",
+      "title": "Garbage not collected for 3 days",
+      "description": "Garbage collection has been missed for the past 3 days in Sector 12. The bins are overflowing and creating hygiene issues.",
+      "category": "sanitation",
+      "address": "Sector 12, Block A",
+      "pincode": "560002",
+      "citizenId": "citizen_001",
+      "citizenName": "John Doe",
+      "citizenPhone": "+91-9876543210",
+      "status": "acknowledged",
+      "priority": "high",
+      "assignedTo": "official_001",
+      "assignedToName": "Sarah Kumar",
+      "slaHours": 24,
+      "createdAt": "2024-08-18T09:00:00.000Z",
+      "updatedAt": "2024-08-18T11:30:00.000Z",
+      "dueDate": "2024-08-19T09:00:00.000Z",
+      "isEscalated": true,
+      "statusHistory": [
+        {
+          "status": "submitted",
+          "timestamp": "2024-08-18T09:00:00.000Z",
+          "updatedBy": "citizen_001",
+          "updatedByName": "John Doe",
+          "remarks": "Grievance submitted"
+        },
+        {
+          "status": "acknowledged",
+          "timestamp": "2024-08-18T11:30:00.000Z",
+          "updatedBy": "official_001",
+          "updatedByName": "Sarah Kumar",
+          "remarks": "Issue acknowledged. Assigning collection team immediately.",
+          "isEscalation": true
+        }
+      ]
+    },
+    {
+      "id": "GRV_20240817_GHI789",
+      "title": "Water supply interruption",
+      "description": "No water supply in the area for the past 2 days. Residents are facing severe inconvenience.",
+      "category": "water_supply",
+      "address": "Green Park Colony, Phase 2",
+      "pincode": "560003",
+      "citizenId": "citizen_001",
+      "citizenName": "John Doe",
+      "citizenPhone": "+91-9876543210",
+      "status": "resolved",
+      "priority": "critical",
+      "assignedTo": "official_001",
+      "assignedToName": "Sarah Kumar",
+      "slaHours": 8,
+      "createdAt": "2024-08-17T06:00:00.000Z",
+      "updatedAt": "2024-08-17T13:45:00.000Z",
+      "dueDate": "2024-08-17T14:00:00.000Z",
+      "isEscalated": false,
+      "statusHistory": [
+        {
+          "status": "submitted",
+          "timestamp": "2024-08-17T06:00:00.000Z",
+          "updatedBy": "citizen_001",
+          "updatedByName": "John Doe",
+          "remarks": "Grievance submitted"
+        },
+        {
+          "status": "acknowledged",
+          "timestamp": "2024-08-17T07:15:00.000Z",
+          "updatedBy": "official_001",
+          "updatedByName": "Sarah Kumar",
+          "remarks": "Emergency response initiated. Technical team dispatched."
+        },
+        {
+          "status": "in_progress",
+          "timestamp": "2024-08-17T08:30:00.000Z",
+          "updatedBy": "official_001",
+          "updatedByName": "Sarah Kumar",
+          "remarks": "Pipeline repair in progress. Water tankers arranged for temporary supply."
+        },
+        {
+          "status": "resolved",
+          "timestamp": "2024-08-17T13:45:00.000Z",
+          "updatedBy": "official_001",
+          "updatedByName": "Sarah Kumar",
+          "remarks": "Pipeline repaired successfully. Water supply restored to all affected areas."
+        }
+      ]
+    },
+    {
+      "id": "GRV_20240820_JKL012",
+      "title": "Pothole on Highway 45",
+      "description": "Large pothole causing vehicle damage and traffic congestion during peak hours.",
+      "category": "roads",
+      "address": "Highway 45, KM 12.5",
+      "pincode": "560004",
+      "citizenId": "citizen_001",
+      "citizenName": "John Doe",
+      "citizenPhone": "+91-9876543210",
+      "status": "submitted",
+      "priority": "medium",
+      "slaHours": 48,
+      "createdAt": "2024-08-20T10:15:00.000Z",
+      "updatedAt": "2024-08-20T10:15:00.000Z",
+      "dueDate": "2024-08-22T10:15:00.000Z",
+      "isEscalated": false,
+      "statusHistory": [
+        {
+          "status": "submitted",
+          "timestamp": "2024-08-20T10:15:00.000Z",
+          "updatedBy": "citizen_001",
+          "updatedByName": "John Doe",
+          "remarks": "Grievance submitted"
+        }
+      ]
+    },
+    {
+      "id": "GRV_20240816_MNO345",
+      "title": "Public bus frequency reduced",
+      "description": "Bus route 25A frequency has been significantly reduced causing inconvenience to daily commuters.",
+      "category": "public_transport",
+      "address": "Route 25A, Central Station to IT Park",
+      "pincode": "560005",
+      "citizenId": "citizen_001",
+      "citizenName": "John Doe",
+      "citizenPhone": "+91-9876543210",
+      "status": "acknowledged",
+      "priority": "low",
+      "assignedTo": "official_001",
+      "assignedToName": "Sarah Kumar",
+      "slaHours": 24,
+      "createdAt": "2024-08-16T08:00:00.000Z",
+      "updatedAt": "2024-08-16T14:20:00.000Z",
+      "dueDate": "2024-08-17T08:00:00.000Z",
+      "isEscalated": true,
+      "statusHistory": [
+        {
+          "status": "submitted",
+          "timestamp": "2024-08-16T08:00:00.000Z",
+          "updatedBy": "citizen_001",
+          "updatedByName": "John Doe",
+          "remarks": "Grievance submitted"
+        },
+        {
+          "status": "acknowledged",
+          "timestamp": "2024-08-16T14:20:00.000Z",
+          "updatedBy": "official_001",
+          "updatedByName": "Sarah Kumar",
+          "remarks": "Issue acknowledged. Coordinating with transport department for schedule review.",
+          "isEscalation": true
+        }
+      ]
+    },
+    {
+      "id": "GRV_20240815_PQR678",
+      "title": "Primary health center lacks medicines",
+      "description": "The local primary health center has been out of essential medicines for fever and common cold for over a week.",
+      "category": "healthcare",
+      "address": "Primary Health Center, Sector 8",
+      "pincode": "560006",
+      "citizenId": "citizen_001",
+      "citizenName": "John Doe",
+      "citizenPhone": "+91-9876543210",
+      "status": "in_progress",
+      "priority": "high",
+      "assignedTo": "official_002",
+      "assignedToName": "Raj Patel",
+      "slaHours": 6,
+      "createdAt": "2024-08-15T11:30:00.000Z",
+      "updatedAt": "2024-08-15T17:45:00.000Z",
+      "dueDate": "2024-08-15T17:30:00.000Z",
+      "isEscalated": true,
+      "statusHistory": [
+        {
+          "status": "submitted",
+          "timestamp": "2024-08-15T11:30:00.000Z",
+          "updatedBy": "citizen_001",
+          "updatedByName": "John Doe",
+          "remarks": "Grievance submitted"
+        },
+        {
+          "status": "acknowledged",
+          "timestamp": "2024-08-15T13:15:00.000Z",
+          "updatedBy": "official_002",
+          "updatedByName": "Raj Patel",
+          "remarks": "Urgent issue acknowledged. Contacting medical supplies department immediately."
+        },
+        {
+          "status": "in_progress",
+          "timestamp": "2024-08-15T17:45:00.000Z",
+          "updatedBy": "official_002",
+          "updatedByName": "Raj Patel",
+          "remarks": "Emergency medicine supply arranged. Expected delivery within 2 hours.",
+          "isEscalation": true
+        }
+      ]
+    },
+    {
+      "id": "GRV_20240814_STU901",
+      "title": "School infrastructure issues",
+      "description": "Government school building has leaking roof and broken windows affecting students' learning environment.",
+      "category": "education",
+      "address": "Government High School, Block C",
+      "pincode": "560007",
+      "citizenId": "citizen_001",
+      "citizenName": "John Doe",
+      "citizenPhone": "+91-9876543210",
+      "status": "submitted",
+      "priority": "medium",
+      "slaHours": 72,
+      "createdAt": "2024-08-14T16:45:00.000Z",
+      "updatedAt": "2024-08-14T16:45:00.000Z",
+      "dueDate": "2024-08-17T16:45:00.000Z",
+      "isEscalated": false,
+      "statusHistory": [
+        {
+          "status": "submitted",
+          "timestamp": "2024-08-14T16:45:00.000Z",
+          "updatedBy": "citizen_001",
+          "updatedByName": "John Doe",
+          "remarks": "Grievance submitted"
+        }
+      ]
+    },
+    {
+      "id": "GRV_20240813_VWX234",
+      "title": "Noise pollution from construction",
+      "description": "Unauthorized construction work causing excessive noise pollution during night hours violating guidelines.",
+      "category": "other",
+      "address": "Industrial Area, Plot No. 45",
+      "pincode": "560008",
+      "citizenId": "citizen_001",
+      "citizenName": "John Doe",
+      "citizenPhone": "+91-9876543210",
+      "status": "rejected",
+      "priority": "low",
+      "assignedTo": "official_001",
+      "assignedToName": "Sarah Kumar",
+      "slaHours": 48,
+      "createdAt": "2024-08-13T22:30:00.000Z",
+      "updatedAt": "2024-08-14T10:15:00.000Z",
+      "dueDate": "2024-08-15T22:30:00.000Z",
+      "isEscalated": false,
+      "statusHistory": [
+        {
+          "status": "submitted",
+          "timestamp": "2024-08-13T22:30:00.000Z",
+          "updatedBy": "citizen_001",
+          "updatedByName": "John Doe",
+          "remarks": "Grievance submitted"
+        },
+        {
+          "status": "acknowledged",
+          "timestamp": "2024-08-14T08:45:00.000Z",
+          "updatedBy": "official_001",
+          "updatedByName": "Sarah Kumar",
+          "remarks": "Complaint acknowledged. Investigating construction permits and timing violations."
+        },
+        {
+          "status": "rejected",
+          "timestamp": "2024-08-14T10:15:00.000Z",
+          "updatedBy": "official_001",
+          "updatedByName": "Sarah Kumar",
+          "remarks": "After investigation, construction was found to be within permitted hours (6 AM - 10 PM). Valid permits available. Noise levels within acceptable limits as per recent measurement."
+        }
+      ]
+    }
+  ]
+}

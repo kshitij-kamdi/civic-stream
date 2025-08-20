@@ -108,10 +108,10 @@ export default function LoginOfficial() {
               )}
             </div>
             <div>
-              <CardTitle>
+              <CardTitle className="text-2xl font-semibold text-foreground">
                 {loginType === 'admin' ? 'Admin Login' : 'Official Login'}
               </CardTitle>
-              <CardDescription>
+              <CardDescription className="text-base text-muted-foreground mt-2">
                 {loginType === 'admin' 
                   ? 'Access administrative functions'
                   : 'Enter your official credentials to access the dashboard'

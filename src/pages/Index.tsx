@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { 
   Scale, 
   Users, 
@@ -12,7 +13,13 @@ import {
   ArrowRight,
   UserPlus,
   LogIn,
-  Zap
+  Zap,
+  Globe,
+  BookOpen,
+  ChevronDown,
+  Search,
+  Phone,
+  MessageCircle
 } from 'lucide-react';
 import { getAuthUser } from '@/lib/mockDb';
 
@@ -214,6 +221,188 @@ const Index = () => {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Language Selection Section */}
+      <section className="py-16 bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center space-y-8"
+          >
+            <div className="space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Choose Your Preferred Language
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Access the portal in your preferred language for a better experience.
+              </p>
+            </div>
+
+            <div className="flex justify-center">
+              <div className="bg-gradient-card p-6 rounded-2xl border shadow-card">
+                <div className="flex items-center gap-4">
+                  <Globe className="h-8 w-8 text-primary" />
+                  <Select defaultValue="english">
+                    <SelectTrigger className="w-64">
+                      <SelectValue placeholder="Select Language" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="english">English</SelectItem>
+                      <SelectItem value="hindi">हिन्दी (Hindi)</SelectItem>
+                      <SelectItem value="bengali">বাংলা (Bengali)</SelectItem>
+                      <SelectItem value="tamil">தமிழ் (Tamil)</SelectItem>
+                      <SelectItem value="telugu">తెలుగు (Telugu)</SelectItem>
+                      <SelectItem value="marathi">मराठी (Marathi)</SelectItem>
+                      <SelectItem value="gujarati">ગુજરાતી (Gujarati)</SelectItem>
+                      <SelectItem value="kannada">ಕನ್ನಡ (Kannada)</SelectItem>
+                      <SelectItem value="malayalam">മലയാളം (Malayalam)</SelectItem>
+                      <SelectItem value="punjabi">ਪੰਜਾਬੀ (Punjabi)</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* User Manual Section */}
+      <section className="py-20 bg-gradient-card">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              User Manual & Help Guide
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Learn how to effectively use the portal to file complaints and track your grievances.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* How to File a Complaint */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <Card className="h-full shadow-card">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-primary/10 rounded-full">
+                      <FileText className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-2xl">How to File a Complaint</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold mt-1">1</div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">Register/Login</h4>
+                      <p className="text-sm text-muted-foreground">Create an account or login to access the complaint portal</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold mt-1">2</div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">Choose Department</h4>
+                      <p className="text-sm text-muted-foreground">Select the relevant government department for your issue</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold mt-1">3</div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">Fill Details</h4>
+                      <p className="text-sm text-muted-foreground">Provide comprehensive details about your complaint</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold mt-1">4</div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">Upload Documents</h4>
+                      <p className="text-sm text-muted-foreground">Attach supporting documents, photos, or evidence</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold mt-1">5</div>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-1">Submit & Track</h4>
+                      <p className="text-sm text-muted-foreground">Submit your complaint and receive a tracking ID</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Help & Support */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <Card className="h-full shadow-card">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-accent/20 rounded-full">
+                      <BookOpen className="h-6 w-6 text-accent-foreground" />
+                    </div>
+                    <CardTitle className="text-2xl">Help & Support</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
+                      <Search className="h-5 w-5 text-primary" />
+                      <div>
+                        <h4 className="font-semibold text-foreground">Track Status</h4>
+                        <p className="text-sm text-muted-foreground">Use your complaint ID to check progress</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
+                      <Clock className="h-5 w-5 text-primary" />
+                      <div>
+                        <h4 className="font-semibold text-foreground">Response Times</h4>
+                        <p className="text-sm text-muted-foreground">Most complaints are addressed within 7-15 days</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
+                      <Phone className="h-5 w-5 text-primary" />
+                      <div>
+                        <h4 className="font-semibold text-foreground">Helpline</h4>
+                        <p className="text-sm text-muted-foreground">Call 1800-XXX-XXXX for urgent assistance</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
+                      <MessageCircle className="h-5 w-5 text-primary" />
+                      <div>
+                        <h4 className="font-semibold text-foreground">Live Chat</h4>
+                        <p className="text-sm text-muted-foreground">Available Mon-Fri, 9 AM - 6 PM</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-4 border-t">
+                    <Button className="w-full" variant="outline">
+                      <BookOpen className="mr-2 h-4 w-4" />
+                      Download Full User Manual
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
         </div>
       </section>
 

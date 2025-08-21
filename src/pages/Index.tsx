@@ -206,8 +206,9 @@ const Index = () => {
                     Get Started Today
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10" asChild>
+                <Button size="lg" variant="secondary" asChild>
                   <a href="/login-official">
+                    <LogIn className="mr-2 h-5 w-5" />
                     Official Login
                   </a>
                 </Button>

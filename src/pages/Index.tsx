@@ -144,6 +144,79 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Grievance Submission Section */}
+      <section className="py-20 bg-gradient-card">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center space-y-8"
+          >
+            <div className="space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Have a Grievance or Complaint?
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Your concerns matter to us. Submit your grievances and complaints through our secure platform for prompt resolution by the appropriate authorities.
+              </p>
+            </div>
+
+            <div className="bg-background/50 backdrop-blur rounded-2xl p-8 border shadow-card">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="p-3 bg-primary/10 rounded-full w-fit mx-auto mb-3">
+                    <FileText className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Submit Complaint</h3>
+                  <p className="text-sm text-muted-foreground">Describe your issue in detail with supporting documents</p>
+                </div>
+                <div className="text-center">
+                  <div className="p-3 bg-accent/20 rounded-full w-fit mx-auto mb-3">
+                    <Clock className="h-6 w-6 text-accent-foreground" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Track Progress</h3>
+                  <p className="text-sm text-muted-foreground">Monitor your complaint status in real-time</p>
+                </div>
+                <div className="text-center">
+                  <div className="p-3 bg-success/20 rounded-full w-fit mx-auto mb-3">
+                    <CheckCircle className="h-6 w-6 text-success-foreground" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Get Resolution</h3>
+                  <p className="text-sm text-muted-foreground">Receive timely resolution from officials</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                {authUser ? (
+                  <Button size="lg" asChild>
+                    <a href="/raise">
+                      <FileText className="mr-2 h-5 w-5" />
+                      Submit Your Grievance
+                    </a>
+                  </Button>
+                ) : (
+                  <>
+                    <Button size="lg" asChild>
+                      <a href="/register-citizen">
+                        <UserPlus className="mr-2 h-5 w-5" />
+                        Register to Submit
+                      </a>
+                    </Button>
+                    <Button size="lg" variant="outline" asChild>
+                      <a href="/login-citizen">
+                        <LogIn className="mr-2 h-5 w-5" />
+                        Login to Submit
+                      </a>
+                    </Button>
+                  </>
+                )}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

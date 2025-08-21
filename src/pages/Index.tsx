@@ -224,52 +224,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Language Selection Section */}
-      <section className="py-16 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center space-y-8"
-          >
-            <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Choose Your Preferred Language
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Access the portal in your preferred language for a better experience.
-              </p>
-            </div>
-
-            <div className="flex justify-center">
-              <div className="bg-gradient-card p-6 rounded-2xl border shadow-card">
-                <div className="flex items-center gap-4">
-                  <Globe className="h-8 w-8 text-primary" />
-                  <Select defaultValue="english">
-                    <SelectTrigger className="w-64">
-                      <SelectValue placeholder="Select Language" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="english">English</SelectItem>
-                      <SelectItem value="hindi">हिन्दी (Hindi)</SelectItem>
-                      <SelectItem value="bengali">বাংলা (Bengali)</SelectItem>
-                      <SelectItem value="tamil">தமிழ் (Tamil)</SelectItem>
-                      <SelectItem value="telugu">తెలుగు (Telugu)</SelectItem>
-                      <SelectItem value="marathi">मराठी (Marathi)</SelectItem>
-                      <SelectItem value="gujarati">ગુજરાતી (Gujarati)</SelectItem>
-                      <SelectItem value="kannada">ಕನ್ನಡ (Kannada)</SelectItem>
-                      <SelectItem value="malayalam">മലയാളം (Malayalam)</SelectItem>
-                      <SelectItem value="punjabi">ਪੰਜਾਬੀ (Punjabi)</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* User Manual Section */}
       <section className="py-20 bg-gradient-card">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

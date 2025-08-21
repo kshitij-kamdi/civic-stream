@@ -9,6 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { 
@@ -19,7 +20,8 @@ import {
   UserCheck, 
   Shield,
   Menu,
-  X
+  X,
+  Globe
 } from 'lucide-react';
 import { getAuthUser, clearAuth } from '@/lib/mockDb';
 import { UserRole } from '@/lib/types';
@@ -100,6 +102,30 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+          </div>
+
+          {/* Language Selector */}
+          <div className="hidden md:flex items-center">
+            <Select defaultValue="english">
+              <SelectTrigger className="w-40 h-9 border-0 bg-transparent">
+                <div className="flex items-center gap-2">
+                  <Globe className="h-4 w-4 text-muted-foreground" />
+                  <SelectValue />
+                </div>
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="english">English</SelectItem>
+                <SelectItem value="hindi">हिन्दी</SelectItem>
+                <SelectItem value="bengali">বাংলা</SelectItem>
+                <SelectItem value="tamil">தமிழ்</SelectItem>
+                <SelectItem value="telugu">తెలుగు</SelectItem>
+                <SelectItem value="marathi">मराठी</SelectItem>
+                <SelectItem value="gujarati">ગુજરાતી</SelectItem>
+                <SelectItem value="kannada">ಕನ್ನಡ</SelectItem>
+                <SelectItem value="malayalam">മലയാളം</SelectItem>
+                <SelectItem value="punjabi">ਪੰਜਾਬੀ</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
 
           {/* User Menu */}
